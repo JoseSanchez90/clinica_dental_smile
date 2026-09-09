@@ -9,6 +9,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 summary::-webkit-details-marker { display: none; }
 
 @layer components {
+  .page-gutter { @apply w-full px-5 md:px-10 lg:px-20 xl:px-32 2xl:px-40; }
   .button-primary { @apply inline-flex min-h-12 items-center justify-center bg-[#172a78] px-6 text-sm font-bold text-white transition hover:bg-[#223b9a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#172a78]; }
   .eyebrow { @apply inline-flex items-center bg-[#f3f5fa] px-3 py-2 text-xs font-bold text-[#172a78]; }
   .section-title { @apply text-4xl font-semibold leading-[1.02] tracking-[-.045em] text-[#080a12] md:text-5xl; }

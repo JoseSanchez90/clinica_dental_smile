@@ -11,7 +11,7 @@ const team = [
 export function TeamSection() {
   return (
     <section className="bg-[#f5f7f8] py-20 lg:py-28">
-      <div className="mx-auto grid max-w-7xl gap-10 px-5 md:px-10 lg:grid-cols-[.68fr_1.32fr]">
+      <div className="page-gutter grid gap-10 lg:grid-cols-[.68fr_1.32fr]">
         <div>
           <span className="eyebrow">Nuestro equipo</span><h2 className="section-title mt-5">Conoce a nuestros profesionales</h2>
           <p className="mt-5 max-w-sm leading-7 text-slate-500">Un equipo comprometido con una atención cercana, procedimientos precisos y una experiencia cómoda para cada paciente.</p>

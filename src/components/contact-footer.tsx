@@ -4,8 +4,8 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa6";
 
 export function ContactFooter() {
   return (
-    <footer className="px-5 pb-8 pt-20 md:px-10 lg:pt-28">
-      <div className="mx-auto grid max-w-7xl border border-slate-200 bg-[#f7f8fa] lg:grid-cols-[.72fr_1.28fr]">
+    <footer className="page-gutter pb-8 pt-20 lg:pt-28">
+      <div className="grid w-full border border-slate-200 bg-[#f7f8fa] lg:grid-cols-[.72fr_1.28fr]">
         <div className="relative min-h-[430px] overflow-hidden border-b border-slate-200 p-8 lg:border-b-0 lg:border-r">
           <Link href="/" className="text-2xl font-extrabold tracking-tight text-[#172a78]">Smile<span className="text-[#ed3d43]">.</span>Dental®</Link>
           <div aria-hidden className="absolute left-[42%] top-[22%] h-[430px] w-[430px] rounded-full border border-[#172a78]/25 before:absolute before:inset-12 before:rounded-full before:border before:border-[#172a78]/25 after:absolute after:inset-24 after:rounded-full after:border after:border-[#172a78]/25">
@@ -31,7 +31,7 @@ export function ContactFooter() {
           </form>
         </div>
       </div>
-      <div className="mx-auto mt-8 max-w-7xl text-sm text-slate-500">© {new Date().getFullYear()} Smile Dental. Todos los derechos reservados.</div>
+      <div className="mt-8 text-sm text-slate-500">© {new Date().getFullYear()} Smile Dental. Todos los derechos reservados.</div>
     </footer>
   );
 }
