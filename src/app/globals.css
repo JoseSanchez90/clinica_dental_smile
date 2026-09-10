@@ -1,18 +1,44 @@
 @import "tailwindcss";
 
-:root { --ink: #080a12; --blue: #172a78; --coral: #ed3d43; }
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; background: white; color: var(--ink); font-family: var(--font-geist), Arial, sans-serif; }
-button, input, textarea, select { font: inherit; }
-button, a { -webkit-tap-highlight-color: transparent; }
-summary::-webkit-details-marker { display: none; }
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  @apply m-0 bg-white text-slate-950;
+  font-family: var(--font-geist), Arial, sans-serif;
+}
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
 
 @layer components {
-  .page-gutter { @apply w-full px-5 md:px-10 lg:px-20 xl:px-32 2xl:px-40; }
-  .button-primary { @apply inline-flex min-h-12 items-center justify-center bg-[#172a78] px-6 text-sm font-bold text-white transition hover:bg-[#223b9a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#172a78]; }
-  .eyebrow { @apply inline-flex items-center bg-[#f3f5fa] px-3 py-2 text-xs font-bold text-[#172a78]; }
-  .section-title { @apply text-4xl font-semibold leading-[1.02] tracking-[-.045em] text-[#080a12] md:text-5xl; }
-  .field { @apply flex min-h-13 items-center gap-3 border border-slate-200 bg-white px-4 text-slate-400 focus-within:border-[#172a78]; }
-  .field input, .field select { @apply w-full bg-transparent py-3 text-sm text-slate-700 outline-none; }
+  .page-gutter {
+    @apply max-w-7xl mx-auto px-5 md:px-4 lg:px-12 xl:px-24 2xl:px-30;
+  }
+  .button-primary {
+    @apply inline-flex min-h-12 items-center justify-center bg-blue-900 px-6 text-sm font-bold text-white transition hover:bg-blue-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-900;
+  }
+  .section-title {
+    @apply text-4xl font-semibold leading-[1.02] tracking-[-.045em] text-slate-950 md:text-5xl;
+  }
+  .field {
+    @apply flex min-h-13 items-center gap-3 border border-slate-200 bg-white px-4 text-slate-400 focus-within:border-blue-900;
+  }
+  .field input,
+  .field select {
+    @apply w-full bg-transparent py-3 text-sm text-slate-700 outline-none;
+  }
 }

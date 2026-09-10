@@ -10,5 +10,5 @@ export const questions = [
 ];
 
 export function FaqList({ limit }: { limit?: number }) {
-  return <div className="divide-y divide-slate-200 border-y border-slate-200">{questions.slice(0, limit).map((item, i) => <details key={item.q} className="group" open={i === 0}><summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-lg font-semibold marker:content-none group-open:text-[#172a78]"><span>{item.q}</span><FiChevronDown className="shrink-0 transition group-open:rotate-180" /></summary><p className="max-w-3xl pb-7 leading-7 text-slate-500">{item.a}</p></details>)}</div>;
+  return <div className="divide-y divide-slate-200 border-y border-slate-200">{questions.slice(0, limit).map((item, i) => <details key={item.q} className="group" open={i === 0}><summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-lg font-semibold marker:content-none group-open:text-blue-900"><span>{item.q}</span><FiChevronDown className="shrink-0 transition group-open:rotate-180" /></summary><p className="max-w-3xl pb-7 leading-7 text-slate-500">{item.a}</p></details>)}</div>;
 }

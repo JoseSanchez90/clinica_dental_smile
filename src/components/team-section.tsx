@@ -10,7 +10,7 @@ const team = [
 
 export function TeamSection() {
   return (
-    <section className="bg-[#f5f7f8] py-20 lg:py-28">
+    <section className="bg-slate-50 py-20 lg:py-28">
       <div className="page-gutter grid gap-10 lg:grid-cols-[.68fr_1.32fr]">
         <div>
           <span className="eyebrow">Nuestro equipo</span><h2 className="section-title mt-5">Conoce a nuestros profesionales</h2>
@@ -20,7 +20,7 @@ export function TeamSection() {
         <div className="grid gap-5 sm:grid-cols-2">
           {team.map((person) => <article key={person.name} className="group relative min-h-[360px] overflow-hidden bg-slate-200">
             <Image src={person.image} alt={person.name} fill className="object-cover transition duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 33vw" />
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#111827]/90 to-transparent p-6 pt-24 text-white"><h3 className="text-xl font-semibold">{person.name}</h3><p className="mt-1 text-sm text-white/75">{person.role}</p></div>
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-900/90 to-transparent p-6 pt-24 text-white"><h3 className="text-xl font-semibold">{person.name}</h3><p className="mt-1 text-sm text-white/75">{person.role}</p></div>
           </article>)}
         </div>
       </div>
