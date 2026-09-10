@@ -10,9 +10,9 @@ const nav = [
 
 export function Header({ constrained = false }: { constrained?: boolean }) {
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur">
+    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur">
       <div
-        className={`${constrained ? "mx-auto max-w-7xl px-5 md:px-8" : ""} flex h-20 items-center justify-between lg:px-24 lg:h-24`}
+        className={`${constrained ? "mx-auto max-w-7xl px-5 md:px-8" : ""} flex h-20 items-center justify-between lg:px-0 lg:h-24`}
       >
         <Link
           href="/"

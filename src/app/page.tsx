@@ -8,18 +8,21 @@ import { TeamSection } from "@/components/team-section";
 import { OtherServices } from "@/components/other-services";
 import { ContactFooter } from "@/components/contact-footer";
 import Cup from "@/../public/svg/cup.svg";
+import Colgate from "@/../public/svg/colgate.svg";
+import Sensodyne from "@/../public/svg/sensodyne.svg";
+import OralB from "@/../public/svg/oral-b.svg";
 
 export default function Home() {
   return (
     <>
       <Header constrained />
       <main>
-        <section className="page-gutter grid min-h-167.5 items-center gap-12 py-16 lg:grid-cols-[1.05fr_.95fr] lg:py-24">
+        <section className="page-gutter grid min-h-167.5 items-center gap-12 py-16 lg:grid-cols-[1.05fr_.95fr] lg:pt-12 lg:pb-24">
           <div className="max-w-2xl">
             <div className="w-fit bg-slate-100 flex items-center gap-2 px-4 py-3 text-md font-bold text-blue-900">
               {" "}
-              <Image src={Cup} alt="" width={24} height={24} /> Clínica dental
-              de confianza
+              <Image src={Cup} alt="IconCup" width={24} height={24} /> Clínica
+              dental de confianza
             </div>
             <h1 className="mt-7 text-5xl font-semibold leading-[.96] tracking-[-.055em] text-slate-950 sm:text-6xl 2xl:text-7xl">
               Odontología amable, completa y pensada para ti
@@ -32,10 +35,10 @@ export default function Home() {
             <Link className="button-primary mt-9" href="/contactanos#cita">
               Reservar una cita
             </Link>
-            <div className="mt-14 flex flex-wrap gap-x-8 gap-y-3 text-sm font-medium text-slate-300">
-              <span>✦ Atención cálida</span>
-              <span>◇ Tecnología moderna</span>
-              <span>≋ Resultados naturales</span>
+            <div className="mt-14 flex flex-wrap gap-x-12 gap-y-3 text-sm font-medium text-slate-300">
+              <Image src={Colgate} alt="Colgate" width={128} height={128} />
+              <Image src={Sensodyne} alt="Sensodyne" width={128} height={128} />
+              <Image src={OralB} alt="OralB" width={128} height={128} />
             </div>
           </div>
           <div className="relative mx-auto aspect-square w-full max-w-140">
