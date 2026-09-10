@@ -1,58 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-
-export const services = [
-  {
-    title: "Odontología preventiva",
-    text: "Revisiones, limpiezas y orientación para mantener dientes y encías saludables.",
-    image: "/images/paciente-feliz.jpg",
-  },
-  {
-    title: "Odontología estética",
-    text: "Blanqueamiento, carillas y armonización para realzar tu sonrisa con naturalidad.",
-    image: "/images/consulta-dental.jpg",
-  },
-  {
-    title: "Odontología restauradora",
-    text: "Restauraciones, coronas, puentes y prótesis para recuperar función y confianza.",
-    image: "/images/tratamiento-dental.jpg",
-  },
-  {
-    title: "Odontología general",
-    text: "Atención integral y seguimiento cercano para toda la familia.",
-    image: "/images/consulta-dental.jpg",
-  },
-  {
-    title: "Implantes dentales",
-    text: "Soluciones seguras y duraderas para reemplazar piezas perdidas.",
-    image: "/images/paciente-feliz.jpg",
-  },
-  {
-    title: "Cirugía dental",
-    text: "Procedimientos precisos con protocolos modernos y recuperación acompañada.",
-    image: "/images/tratamiento-dental.jpg",
-  },
-  {
-    title: "Brackets",
-    text: "Ortodoncia personalizada para alinear tu sonrisa y mejorar tu mordida.",
-    image: "/images/sonrisa.jpg",
-  },
-  {
-    title: "Protección dental",
-    text: "Protectores, férulas y prevención para conservar tu salud bucal.",
-    image: "/images/cepillos.jpg",
-  },
-  {
-    title: "Alineadores",
-    text: "Ortodoncia discreta y cómoda con planificación digital.",
-    image: "/images/sonrisa.jpg",
-  },
-];
+import { dentalServices } from "@/data/services";
 
 export function ServiceCards({ limit }: { limit?: number }) {
   return (
     <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-      {services.slice(0, limit).map((service, index) => (
+      {dentalServices.slice(0, limit).map((service, index) => (
         <article
           key={service.title}
           className="group border border-slate-200 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
@@ -67,7 +20,7 @@ export function ServiceCards({ limit }: { limit?: number }) {
             {service.text}
           </p>
           <Link
-            href="/contactanos#cita"
+            href={`/servicios/${service.slug}`}
             className="mt-7 flex h-12 items-center justify-center border border-blue-900 text-sm font-bold transition-all duration-300 hover:border-blue-900 hover:bg-blue-900 hover:text-white"
           >
             Conocer más

@@ -1,79 +1,20 @@
 import Image from "next/image";
-import Link from "next/link";
 import { FaStar } from "react-icons/fa6";
 import { Header } from "@/components/header";
+import { HomeHero } from "@/components/home-hero";
 import { AppointmentCard } from "@/components/appointment-card";
 import { ServiceCards } from "@/components/service-cards";
 import { TeamSection } from "@/components/team-section";
 import { OtherServices } from "@/components/other-services";
 import { ContactFooter } from "@/components/contact-footer";
-import Cup from "@/../public/svg/cup.svg";
-import Colgate from "@/../public/svg/colgate.svg";
-import Sensodyne from "@/../public/svg/sensodyne.svg";
-import OralB from "@/../public/svg/oral-b.svg";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <>
-      <Header constrained />
+      <Header constrained overlay />
       <main>
-        <section className="page-gutter grid min-h-167.5 items-center gap-12 py-16 lg:grid-cols-[1.05fr_.95fr] lg:pt-12 lg:pb-24">
-          <div className="max-w-2xl">
-            <div className="w-fit bg-slate-100 flex items-center gap-2 px-4 py-3 text-md font-bold text-blue-900">
-              {" "}
-              <Image src={Cup} alt="IconCup" width={24} height={24} /> Clínica
-              dental de confianza
-            </div>
-            <h1 className="mt-7 text-5xl font-semibold leading-[.96] tracking-[-.055em] text-slate-950 sm:text-6xl 2xl:text-7xl">
-              Odontología amable, completa y pensada para ti
-            </h1>
-            <p className="mt-7 max-w-xl text-lg leading-8 text-slate-500">
-              Nuestro equipo de dentistas con experiencia crea una atención
-              cálida y tranquila para cada paciente, desde la primera consulta
-              hasta tu mejor sonrisa.
-            </p>
-            <Link className="button-primary mt-9" href="/contactanos#cita">
-              Reservar una cita
-            </Link>
-            <div className="mt-14 flex flex-wrap gap-x-12 gap-y-3 text-sm font-medium text-slate-300">
-              <Image src={Colgate} alt="Colgate" width={128} height={128} />
-              <Image src={Sensodyne} alt="Sensodyne" width={128} height={128} />
-              <Image src={OralB} alt="OralB" width={128} height={128} />
-            </div>
-          </div>
-          <div className="relative mx-auto aspect-square w-full max-w-140">
-            <div className="absolute inset-[5%] rounded-[34%_12%_34%_12%] bg-slate-100" />
-            <div className="absolute left-[2%] top-[1%] h-[42%] w-[42%] overflow-hidden rounded-full border-12 border-white">
-              <Image
-                src="/images/sonrisa.jpg"
-                alt="Sonrisa saludable"
-                fill
-                className="object-cover"
-                priority
-                sizes="240px"
-              />
-            </div>
-            <div className="absolute right-0 top-[18%] h-[57%] w-[57%] overflow-hidden rounded-full border-12 border-white">
-              <Image
-                src="/images/paciente-feliz.jpg"
-                alt="Paciente satisfecha en consulta"
-                fill
-                className="object-cover"
-                priority
-                sizes="330px"
-              />
-            </div>
-            <div className="absolute bottom-[2%] left-[8%] h-[38%] w-[38%] overflow-hidden rounded-[50%_50%_18%_50%] border-12 border-white">
-              <Image
-                src="/images/tratamiento-dental.jpg"
-                alt="Atención odontológica"
-                fill
-                className="object-cover"
-                sizes="220px"
-              />
-            </div>
-          </div>
-        </section>
+        <HomeHero />
         <section className="bg-slate-50">
           <div className="grid w-full lg:grid-cols-2">
             <div className="relative min-h-140 overflow-hidden">
@@ -123,7 +64,7 @@ export default function Home() {
         </section>
         <TeamSection />
         <section className="relative overflow-hidden py-20 lg:py-28">
-          <div className="absolute inset-x-0 top-1/2 h-20 -rotate-3 bg-slate-50" />
+          <div className="absolute -inset-x-1 top-1/2 h-8 -rotate-3 bg-red-600" />
           <div className="relative mx-auto max-w-5xl border border-slate-200 bg-white px-6 py-14 text-center shadow-sm md:px-12">
             <h2 className="section-title">Reserva tu próxima cita</h2>
             <p className="mx-auto mt-4 max-w-xl text-slate-500">

@@ -14,50 +14,47 @@ export const metadata: Metadata = {
 export default function ServiciosPage() {
   return (
     <>
-      <Header />
+      <Header constrained />
       <main>
         <section className="relative overflow-hidden bg-slate-50 py-20 text-center lg:py-28">
           <div className="page-gutter relative z-10">
-            <div className="absolute left-[25%] top-0 hidden h-16 w-16 overflow-hidden rounded-full lg:block">
+            <div className="absolute left-[8%] -top-14 h-12 w-12 overflow-hidden rounded-full lg:left-[25%] lg:-top-18 lg:h-16 lg:w-16">
               <Image
-                src="/images/doctor.jpg"
+                src="/images/dr-diego-salazar.png"
                 alt=""
                 fill
                 className="object-cover"
                 sizes="64px"
               />
             </div>
-            <div className="absolute left-[32%] bottom-0 hidden h-12 w-12 overflow-hidden rounded-full lg:block">
+            <div className="absolute left-8 bottom-4 h-12 w-12 overflow-hidden rounded-full lg:bottom-0 lg:left-[32%] lg:top-62">
               <Image
-                src="/images/doctora.jpg"
+                src="/images/dra-valeria-mendoza.png"
                 alt=""
                 fill
                 className="object-cover"
                 sizes="48px"
               />
             </div>
-            <div className="absolute right-[24%] -top-14 hidden h-16 w-16 overflow-hidden rounded-full lg:block">
+            <div className="absolute right-18 -top-18 h-12 w-12 overflow-hidden rounded-full lg:right-[24%] lg:-top-24 lg:h-16 lg:w-16">
               <Image
-                src="/images/doctora.jpg"
+                src="/images/dr-andres-rivas.png"
                 alt=""
                 fill
                 className="object-cover"
                 sizes="64px"
               />
             </div>
-            <div className="absolute right-[12%] bottom-14 hidden h-20 w-20 overflow-hidden rounded-full lg:block">
+            <div className="absolute -bottom-12 right-4 h-14 w-14 overflow-hidden rounded-full lg:bottom-0 lg:right-[12%] lg:h-20 lg:w-20">
               <Image
-                src="/images/paciente-feliz.jpg"
+                src="/images/dra-camila-torres.png"
                 alt=""
                 fill
                 className="object-cover"
                 sizes="80px"
               />
             </div>
-            <div className="w-fit mx-auto bg-blue-100 flex items-center gap-2 px-4 py-2 text-md font-bold text-blue-900">
-              🦷 Servicios
-            </div>
-            <h1 className="relative mx-auto mt-6 max-w-4xl text-5xl font-semibold leading-[.98] tracking-[-.055em] sm:text-6xl lg:text-7xl">
+            <h1 className="relative mx-auto max-w-4xl text-5xl font-semibold leading-[.98] tracking-[-.055em] sm:text-6xl lg:text-7xl">
               Dale a tu sonrisa el cuidado que se merece
             </h1>
             <p className="relative mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-500">
@@ -77,8 +74,7 @@ export default function ServiciosPage() {
         </section>
         <section className="page-gutter grid gap-8 pb-20 lg:grid-cols-[.9fr_1.1fr] lg:pb-28">
           <div>
-            <span className="eyebrow">Nuestra forma de cuidar</span>
-            <h2 className="section-title mt-5">
+            <h2 className="section-title">
               Alta calidad y tratamientos accesibles
             </h2>
           </div>
@@ -102,7 +98,7 @@ export default function ServiciosPage() {
         <section className="page-gutter grid items-center pb-20 lg:grid-cols-2 lg:pb-28">
           <div className="relative min-h-117.5">
             <Image
-              src="/images/paciente-feliz.jpg"
+              src="/images/testimonio-servicios.jpg"
               alt="Paciente satisfecha"
               fill
               className="object-cover"

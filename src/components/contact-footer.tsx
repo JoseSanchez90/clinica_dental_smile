@@ -2,10 +2,16 @@ import Link from "next/link";
 import { FiMail } from "react-icons/fi";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa6";
 
+const socialLinks = [
+  { name: "Instagram", href: "https://www.instagram.com/", icon: FaInstagram },
+  { name: "LinkedIn", href: "https://www.linkedin.com/", icon: FaLinkedinIn },
+  { name: "Facebook", href: "https://www.facebook.com/", icon: FaFacebookF },
+];
+
 export function ContactFooter() {
   return (
     <footer className="page-gutter pb-8 pt-20 lg:pt-28">
-      <div className="grid w-full gap-2 lg:grid-cols-[.72fr_1.28fr]">
+      <div className="grid w-full gap-4 lg:gap-6 lg:grid-cols-[.72fr_1.28fr]">
         <div className="relative min-h-107.5 overflow-hidden border border-slate-200 bg-slate-50 p-8">
           <Link
             href="/"
@@ -19,22 +25,27 @@ export function ContactFooter() {
           >
             <span className="absolute left-8 top-28 h-8 w-8 rounded-full bg-[url('/images/doctor.jpg')] bg-cover" />
             <span className="absolute left-36 top-8 h-7 w-7 rounded-full bg-[url('/images/doctora.jpg')] bg-cover" />
-            <span className="absolute left-32 top-60 h-9 w-9 rounded-full bg-[url('/images/paciente-feliz.jpg')] bg-cover" />
+            <span className="absolute left-32 top-60 h-9 w-9 rounded-full bg-[url('/images/doctora2.webp')] bg-cover" />
           </div>
           <div className="absolute bottom-8 left-8 flex gap-3 text-blue-900">
-            {[FaInstagram, FaLinkedinIn, FaFacebookF].map((Icon, i) => (
+            {socialLinks.map(({ name, href, icon: Icon }) => (
               <a
-                key={i}
-                href="#"
-                aria-label={["Instagram", "LinkedIn", "Facebook"][i]}
-                className="grid h-10 w-10 place-items-center border border-slate-200 bg-white transition hover:bg-blue-900 hover:text-white"
+                key={name}
+                href={href}
+                aria-label={name}
+                target="_blank"
+                rel="noreferrer"
+                className="grid h-10 w-10 place-items-center border border-blue-900 bg-white transition hover:bg-blue-900 hover:text-white"
               >
                 <Icon />
               </a>
             ))}
           </div>
         </div>
-        <div id="cita" className="border border-slate-200 bg-slate-50 p-6 sm:p-10 lg:p-16">
+        <div
+          id="cita"
+          className="border border-slate-200 bg-slate-50 p-6 sm:p-10 lg:p-16"
+        >
           <h2 className="section-title text-center">Nos encantará ayudarte</h2>
           <p className="mt-4 text-center text-slate-500">
             Nuestro equipo está listo para escuchar tus consultas.
@@ -69,7 +80,7 @@ export function ContactFooter() {
             </label>
             <label className="sm:col-span-2">
               <textarea
-                className="min-h-32 w-full resize-y border border-slate-200 bg-white p-4 text-sm outline-none focus:border-blue-900"
+                className="min-h-32 w-full resize-none overflow-y-auto border border-slate-200 bg-white p-4 text-sm outline-none focus:border-blue-900"
                 placeholder="Mensaje"
                 aria-label="Mensaje"
               />
