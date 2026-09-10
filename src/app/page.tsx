@@ -8,6 +8,7 @@ import { TeamSection } from "@/components/team-section";
 import { OtherServices } from "@/components/other-services";
 import { ContactFooter } from "@/components/contact-footer";
 import Link from "next/link";
+import { DemoForm } from "@/components/demo-form";
 
 export default function Home() {
   return (
@@ -63,24 +64,30 @@ export default function Home() {
           <ServiceCards limit={3} />
         </section>
         <TeamSection />
-        <section className="relative overflow-hidden py-20 lg:py-28">
+        <section className="relative overflow-hidden px-6 lg:px-0 py-20 lg:py-28">
           <div className="absolute -inset-x-1 top-1/2 h-8 -rotate-3 bg-red-600" />
           <div className="relative mx-auto max-w-5xl border border-slate-200 bg-white px-6 py-14 text-center shadow-sm md:px-12">
             <h2 className="section-title">Reserva tu próxima cita</h2>
             <p className="mx-auto mt-4 max-w-xl text-slate-500">
               Da el primer paso hacia una sonrisa sana y segura.
             </p>
-            <form className="mx-auto mt-8 flex max-w-2xl flex-col gap-3 sm:flex-row">
+            <DemoForm
+              className="mx-auto mt-8 flex max-w-2xl flex-col gap-3 sm:flex-row"
+              successTitle="Solicitud recibida"
+              successMessage="Gracias por confiar en Smile Dental. Te contactaremos pronto para coordinar tu próxima cita."
+            >
               <input
                 type="email"
+                name="email"
                 aria-label="Correo electrónico"
                 placeholder="Correo electrónico"
                 className="min-h-12 flex-1 border border-slate-200 px-4 outline-none focus:border-blue-900"
+                required
               />
               <button className="button-primary" type="submit">
                 Reservar consulta
               </button>
-            </form>
+            </DemoForm>
           </div>
         </section>
         <OtherServices />

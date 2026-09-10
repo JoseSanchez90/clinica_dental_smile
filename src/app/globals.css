@@ -11,15 +11,180 @@
   }
 }
 
+@keyframes header-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-48px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes page-heading-reveal {
+  from {
+    opacity: 0;
+    translate: 0 72px;
+  }
+  to {
+    opacity: 1;
+    translate: 0;
+  }
+}
+
+@keyframes patient-avatar-reveal {
+  from {
+    opacity: 0;
+    scale: 0.78;
+    translate: 0 48px;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+    translate: 0;
+  }
+}
+
+@keyframes modal-backdrop-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+[aria-invalid="true"] {
+  border-color: var(--color-red-500);
+}
+
+.field:has([aria-invalid="true"]) {
+  border-color: var(--color-red-500);
+}
+
+@media (min-width: 64rem) and (max-height: 50rem) {
+  .home-hero-title {
+    top: 27%;
+    max-width: 48%;
+    font-size: clamp(3rem, 4.5vw, 3.75rem);
+    line-height: 1.06;
+  }
+
+  .home-hero-patients {
+    top: 31%;
+  }
+
+  .home-hero-facts {
+    right: 15%;
+    bottom: clamp(5rem, 16vh, 6.5rem);
+    grid-template-columns: 7.5rem minmax(0, 23rem) 1fr;
+    gap: 2rem;
+  }
+}
+
+.patient-avatar-group > div {
+  animation: patient-avatar-reveal 1500ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.patient-avatar-group > div:nth-child(1) {
+  animation-delay: 180ms;
+}
+
+.patient-avatar-group > div:nth-child(2) {
+  animation-delay: 300ms;
+}
+
+.patient-avatar-group > div:nth-child(3) {
+  animation-delay: 420ms;
+}
+
+.patient-avatar-group > div:nth-child(4) {
+  animation-delay: 540ms;
+}
+
+main > section:first-child h1,
+main > section:first-child h2,
+main > section:first-child h3,
+main > section:first-child p,
+main > section:first-child span,
+main > section:first-child a,
+main > section:first-child button {
+  animation: page-heading-reveal 1500ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+main > section:first-child p,
+main > section:first-child span {
+  animation-delay: 160ms;
+}
+
+main > section:first-child a,
+main > section:first-child button {
+  animation-delay: 320ms;
+}
+
+.scroll-reveal {
+  opacity: 0;
+  translate: 0 72px;
+  transition:
+    opacity 1500ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms),
+    translate 1500ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms);
+  will-change: opacity, translate;
+}
+
+.scroll-reveal[data-reveal="left"] {
+  translate: -72px 0;
+}
+
+.scroll-reveal[data-reveal="right"] {
+  translate: 72px 0;
+}
+
+.scroll-reveal[data-reveal="fade"] {
+  translate: 0;
+}
+
+.scroll-reveal.is-revealed {
+  opacity: 1;
+  translate: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal,
+  header,
+  main > section:first-child *,
+  .patient-avatar-group > div {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    translate: none !important;
+    transition: none !important;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
 html {
   scroll-behavior: auto;
+  overflow-x: clip;
 }
 body {
   @apply m-0 bg-white text-slate-950;
   font-family: var(--font-geist), Arial, sans-serif;
+  max-width: 100%;
+  overflow-x: clip;
 }
 button,
 input,

@@ -37,7 +37,7 @@ export function HomeHero() {
   };
 
   return (
-    <section className="relative min-h-184 overflow-hidden bg-slate-500 text-white md:min-h-screen">
+    <section className="home-hero relative min-h-184 overflow-hidden bg-slate-500 text-white md:min-h-screen">
       <Image
         src="/images/inicio-hero-sonrisa.png"
         alt="Mujer mostrando una sonrisa saludable"
@@ -49,13 +49,13 @@ export function HomeHero() {
       <div className="absolute inset-0 bg-slate-900/20 lg:bg-slate-900/10" />
 
       <div className="page-gutter relative flex min-h-184 flex-col pt-28 pb-8 md:min-h-screen md:pt-36 lg:max-w-none lg:px-0 lg:py-0">
-        <h1 className="max-w-4xl text-4xl font-medium leading-[1.12] tracking-[-.045em] sm:text-5xl md:text-6xl lg:absolute lg:top-[31%] lg:left-[19.3%] lg:max-w-[47%] lg:text-7xl">
+        <h1 className="home-hero-title max-w-4xl text-4xl font-medium leading-[1.12] tracking-[-.045em] sm:text-5xl md:text-6xl lg:absolute lg:top-[31%] lg:left-[19.3%] lg:max-w-[47%] lg:text-7xl">
           Transforma tu sonrisa con atención dental de vanguardia en nuestra
           clínica
         </h1>
 
-        <div className="mt-7 md:mt-9 lg:absolute lg:top-[31%] lg:left-[70.5%] lg:mt-0">
-          <div className="flex -space-x-2">
+        <div className="home-hero-patients mt-7 md:mt-9 lg:absolute lg:top-[31%] lg:left-[70.5%] lg:mt-0">
+          <div className="patient-avatar-group flex -space-x-2">
             {patients.map((patient, index) => (
               <div
                 key={patient}
@@ -75,7 +75,7 @@ export function HomeHero() {
           <p className="text-sm font-medium">Pacientes satisfechos</p>
         </div>
 
-        <div className="mt-auto grid items-center gap-4 lg:absolute lg:right-[19%] lg:bottom-[14.5%] lg:left-[19.3%] lg:grid-cols-[10rem_minmax(0,24rem)_1fr] lg:gap-14">
+        <div className="home-hero-facts mt-auto grid items-center gap-4 lg:absolute lg:right-[19%] lg:bottom-[14.5%] lg:left-[19.3%] lg:grid-cols-[10rem_minmax(0,24rem)_1fr] lg:gap-14">
           <p className="text-lg font-semibold">Datos</p>
           <p
             key={activeFact}

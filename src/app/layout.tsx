@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
+import { ScrollReveal } from "@/components/scroll-reveal";
 import "./globals.css";
 
 const geist = Geist({ variable: "--font-geist", subsets: ["latin"] });
@@ -26,4 +27,13 @@ export const metadata: Metadata = {
     card: "summary_large_image",
   },
 };
-export default function RootLayout({ children }: LayoutProps<"/">) { return <html lang="es-PE" className={geist.variable}><body>{children}</body></html>; }
+export default function RootLayout({ children }: LayoutProps<"/">) {
+  return (
+    <html lang="es-PE" className={geist.variable}>
+      <body>
+        {children}
+        <ScrollReveal />
+      </body>
+    </html>
+  );
+}

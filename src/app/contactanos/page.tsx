@@ -12,6 +12,7 @@ import {
 import { Header } from "@/components/header";
 import { FaqList } from "@/components/faq-list";
 import { ContactFooter } from "@/components/contact-footer";
+import { DemoForm } from "@/components/demo-form";
 
 export const metadata: Metadata = {
   title: "Contáctanos",
@@ -88,26 +89,34 @@ export default function ContactanosPage() {
           ))}
         </section>
         <section id="soporte" className="page-gutter grid gap-12 border border-slate-200 bg-slate-50 py-12 lg:grid-cols-2 lg:py-16">
-          <form className="order-2 grid gap-4 lg:order-1">
+          <DemoForm
+            className="order-2 grid gap-4 lg:order-1"
+            successTitle="Consulta enviada"
+            successMessage="Gracias por comunicarte con nosotros. Revisaremos tu consulta y te responderemos lo antes posible."
+          >
             <label className="field">
-              <input placeholder="Tu nombre" aria-label="Tu nombre" />
+              <input name="name" placeholder="Tu nombre" aria-label="Tu nombre" data-validation="name" required />
             </label>
             <label className="field">
               <input
                 type="email"
+                name="email"
                 placeholder="Tu correo"
                 aria-label="Tu correo"
+                required
               />
             </label>
             <textarea
               placeholder="Cuéntanos cómo podemos ayudarte"
               aria-label="Mensaje"
+              name="message"
+              required
               className="min-h-32 resize-none overflow-y-auto border border-slate-200 bg-white p-4 outline-none focus:border-blue-900"
             />
             <button type="submit" className="button-primary">
               Enviar consulta
             </button>
-          </form>
+          </DemoForm>
           <div className="order-1 lg:order-2">
             <h2 className="section-title">Conversa con nuestro equipo</h2>
             <p className="mt-6 leading-7 text-slate-500">
