@@ -39,14 +39,14 @@ export function HomeHero() {
   return (
     <section className="home-hero relative min-h-184 overflow-hidden bg-slate-500 text-white md:min-h-screen">
       <Image
-        src="/images/inicio-hero-sonrisa.png"
+        src="/images/inicio-hero-sonrisa-v2.png"
         alt="Mujer mostrando una sonrisa saludable"
         fill
         priority
-        className="object-cover object-[68%_center] sm:object-[64%_center] lg:object-center"
+        className="object-cover object-[72%_center] sm:object-[70%_center] md:object-[68%_center] lg:object-center"
         sizes="100vw"
       />
-      <div className="absolute inset-0 bg-slate-900/20 lg:bg-slate-900/10" />
+      <div className="absolute inset-0 bg-slate-900/25 md:bg-slate-900/20 lg:bg-slate-900/5" />
 
       <div className="page-gutter relative flex min-h-184 flex-col pt-28 pb-8 md:min-h-screen md:pt-36 lg:max-w-none lg:px-0 lg:py-0">
         <h1 className="home-hero-title max-w-4xl text-4xl font-medium leading-[1.12] tracking-[-.045em] sm:text-5xl md:text-6xl lg:absolute lg:top-[31%] lg:left-[19.3%] lg:max-w-[47%] lg:text-7xl">
